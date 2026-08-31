@@ -1,35 +1,9 @@
--- Marksheet Assignment
--- Student Name: __________________
--- Roll No: _______________________
+create database college12;
+use college12;
 
--- STEP 1: Create the Marksheet table
--- Fields: RollNo, Name, Department, Marks
+create table marksheet(RollNo integer(5) primary key,Name varchar(20),Department varchar(10),marks integer(5));
+desc marksheet;
 
-CREATE TABLE Marksheet (
-    RollNo INT PRIMARY KEY,
-    Name VARCHAR(50),
-    Department VARCHAR(20),
-    Marks INT
-);
+insert marksheet values("1","Arun","CSE","85"),("2","Divya","IT","78"),("3","Karthik","CSE","92"),("4","Nisha","ECE","67"),("5","Rahul","IT","88");
 
--- STEP 2: Insert the following records
--- 1 Arun CSE 85
--- 2 Divya IT 78
--- 3 Karthik CSE 92
--- 4 Nisha ECE 67
--- 5 Rahul IT 88
-
-INSERT INTO Marksheet (RollNo, Name, Department, Marks)
-VALUES
-(1, 'Arun', 'CSE', 85),
-(2, 'Divya', 'IT', 78),
-(3, 'Karthik', 'CSE', 92),
-(4, 'Nisha', 'ECE', 67),
-(5, 'Rahul', 'IT', 88);
-
--- STEP 3:
--- Display students whose marks are greater than 80.
--- Sort the result in descending order of Marks.
-
--- Write your SELECT query below:
-
+select * from marksheet where marks>80 order by marks DESC;
