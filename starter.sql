@@ -1,9 +1,19 @@
-create database college14;
-use college14;
+CREATE TABLE Marksheet (
+    RollNo INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Department VARCHAR(20),
+    Marks INT
+);
 
-create table marksheet(RollNo integer(5) primary key,Name varchar(10),Department varchar(10),marks integer(5));
-desc marksheet;
+INSERT INTO Marksheet (RollNo, Name, Department, Marks)
+VALUES
+(1, 'Arun', 'CSE', 85),
+(2, 'Divya', 'IT', 78),
+(3, 'Karthik', 'CSE', 92),
+(4, 'Nisha', 'ECE', 67),
+(5, 'Rahul', 'IT', 88);
 
-insert marksheet values("1","Arun","CSE","85"),("2","Divya","IT","78"),("3","Karthik","CSE","92"),("4","Nisha","ECE","67"),("5","Rahul","IT","88");
-
-select from roll no ,name ,depatment,marks, marksheet where marks>80 order by marks DESC;
+SELECT RollNo, Name, Department, Marks
+FROM Marksheet
+WHERE Marks > 80
+ORDER BY Marks DESC;
