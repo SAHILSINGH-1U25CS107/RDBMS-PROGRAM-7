@@ -6,4 +6,4 @@ desc marksheet;
 
 insert marksheet values("1","Arun","CSE","85"),("2","Divya","IT","78"),("3","Karthik","CSE","92"),("4","Nisha","ECE","67"),("5","Rahul","IT","88");
 
-select * from marksheet where marks>80 order by marks DESC;
+select from roll no ,name ,depatment,marks, marksheet where marks>80 order by marks DESC;
